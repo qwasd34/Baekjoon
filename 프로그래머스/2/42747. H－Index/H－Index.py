@@ -15,9 +15,9 @@ def solution(citations):
     citations.sort()
     
     answer=0
-    for i in range(1,len(citations)+1):
-        min_c=citations[-i]
-        if min_c>=i:
+    for i in range(1,len(citations)+1):  
+        num=citations[-i]  
+        if num>=i:
             answer=i
     return answer
 

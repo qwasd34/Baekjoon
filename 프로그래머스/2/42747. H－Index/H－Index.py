@@ -21,4 +21,3 @@ def solution(citations):
             answer=i
     return answer
 
-

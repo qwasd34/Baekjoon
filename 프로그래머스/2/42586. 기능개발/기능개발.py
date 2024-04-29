@@ -28,13 +28,13 @@ def solution(progresses, speeds):
     result= [math.ceil(i/j) for i, j in zip(day, speeds)]
     #math.ceil() 소수점 올림함수
     #print(day)
-    #print(result)
+    #print(result)                #[5,<10, 1, 1, <20, 1]
     st=[]
-    st.append(result[0])
+    st.append(result[0])        #st [5]
     for i in range(1,len(result)):
         #print("st[-1]=",st[-1],"result[i]=",result[i])
-        if st[-1]>=result[i]:
-            st.append(st[-1])
+        if st[-1]>=result[i]:        #[5],[10,10,10],[20,20] 
+            st.append(st[-1])        # st.append(result[i]) 반례 result=[2,1,2] 결과[3] but[2,1]
         else:
             answer.append(len(st))
             st=[]

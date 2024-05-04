@@ -22,7 +22,6 @@
 def solution(s):
     st=list(s)
     #print(st)
-    rg=len(st)-1
     R=0
     for i in range(len(st)):
         if st[-1]==')':
